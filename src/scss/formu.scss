@@ -2,21 +2,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-
-
-#main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-.demo-form-container-cont{
-    position: relative;
-    width: 88%;
 }
 
 .form-container {
@@ -25,8 +10,6 @@
     margin: 2em auto;
     display: grid;
     position: relative;
-    box-shadow: 12px 12px 160px rgba($color: #000000, $alpha: 0.09);
-    border-radius: 8px;
 
     * , *::before, *::after{
         transition: all 0.18s ease;
