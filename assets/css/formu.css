@@ -71,7 +71,7 @@
   margin: 0;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 535px) {
   .group-cont {
     display: -webkit-box;
     display: -ms-flexbox;
