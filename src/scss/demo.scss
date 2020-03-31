@@ -14,14 +14,27 @@
     min-height: 100vh;
 }
 
+#nav{
+    position: fixed;
+
+    button{
+        padding: 6px 12px;
+        background: #fff;
+        border: none;
+        box-shadow: 12px 12px 160px rgba(0, 0, 0, 0.09);
+    }
+}
+
 .demo-form-container-cont{
     position: relative;
     width: 88%;
 }
 
-.demo-form-container-cont .form-container{
-    box-shadow: 12px 12px 160px rgba(0, 0, 0, 0.09);
-    border-radius: 8px;
+.demo-form-container-cont{
+    .form-container{
+        box-shadow: 12px 12px 160px rgba(0, 0, 0, 0.09);
+        border-radius: 8px;
+    }
 }
 
 @media screen and (min-width: 769px) {
