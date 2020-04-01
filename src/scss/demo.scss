@@ -97,10 +97,12 @@
 
 @media screen and (min-width: 769px) {
     .demo-form-container-cont{
+        display: grid;
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         gap: 12px;
     }
 }
+
 
 .active{
     background: hsl(210, 50%, 95%);

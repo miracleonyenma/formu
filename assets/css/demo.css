@@ -110,6 +110,8 @@
 
 @media screen and (min-width: 769px) {
   .demo-form-container-cont {
+    display: -ms-grid;
+    display: grid;
     -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 12px;
