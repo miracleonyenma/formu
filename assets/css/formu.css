@@ -5,74 +5,74 @@
           box-sizing: border-box;
 }
 
-.form-container {
+.formu.form-container {
   width: 100%;
   overflow: hidden;
   position: relative;
 }
 
-.form-container *, .form-container *::before, .form-container *::after {
+.formu.form-container *, .formu.form-container *::before, .formu.form-container *::after {
   -webkit-transition: all 0.18s ease;
   transition: all 0.18s ease;
   font-size: 14px;
 }
 
-.form-wrapper {
+.formu.form-wrapper {
   padding: 12px;
 }
 
-.form-wrapper > div {
+.formu.form-wrapper > div {
   margin: 0 0 12px 0;
 }
 
-.form-wrapper > div:nth-last-of-type(1) {
+.formu.form-wrapper > div:nth-last-of-type(1) {
   margin-bottom: 0;
 }
 
-.group-cont {
+.formu.group-cont {
   display: inline-block;
   width: 100%;
   margin: 12px 0;
 }
 
-.group-cont > div {
+.formu.group-cont > div {
   margin: 0 0 12px 0;
 }
 
-.group-cont > div.radio-field-cont {
+.formu.group-cont > div.formu.radio-field-cont {
   margin-bottom: 0;
 }
 
-.group-cont > div:nth-last-of-type(1) {
+.formu.group-cont > div:nth-last-of-type(1) {
   margin: 0;
 }
 
 @media screen and (min-width: 535px) {
-  .group-cont {
+  .formu.group-cont {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .group-cont > div {
+  .formu.group-cont > div {
     margin: 0;
   }
-  .group-cont .input-field-cont {
+  .formu.group-cont .formu.input-field-cont {
     margin: 0 12px 0 0;
   }
-  .group-cont .input-field-cont:nth-last-child(1) {
+  .formu.group-cont .formu.input-field-cont:nth-last-child(1) {
     margin-left: 0px;
     margin-right: 0px;
   }
 }
 
-.input-field-cont {
+.formu.input-field-cont {
   height: 70px;
   width: 100%;
   margin: 20px 0;
   position: relative;
 }
 
-.input-field-cont input {
+.formu.input-field-cont input {
   width: 100%;
   height: 100%;
   padding: 18px 0 0 18px;
@@ -82,7 +82,7 @@
   background: rgba(0, 0, 0, 0.07);
 }
 
-.input-field-cont input:focus + label span {
+.formu.input-field-cont input:focus + label span {
   -webkit-transform: translateY(-112.5%) scale(0.8);
           transform: translateY(-112.5%) scale(0.8);
   opacity: 0.6;
@@ -94,7 +94,7 @@
   transform-origin: left;
 }
 
-.input-field-cont input:valid + label span {
+.formu.input-field-cont input:valid + label span {
   -webkit-transform: translateY(-112.5%) scale(0.8);
           transform: translateY(-112.5%) scale(0.8);
   opacity: 0.6;
@@ -103,7 +103,7 @@
   color: var(--main);
 }
 
-.input-field-cont label {
+.formu.input-field-cont label {
   position: absolute;
   top: 50%;
   left: 0;
@@ -114,7 +114,7 @@
   cursor: pointer;
 }
 
-.input-field-cont label span {
+.formu.input-field-cont label span {
   position: absolute;
   top: 50%;
   left: 20px;
