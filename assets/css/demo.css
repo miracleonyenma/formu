@@ -107,6 +107,7 @@
   border-radius: 8px;
   -webkit-transition: all 0.82s ease;
   transition: all 0.82s ease;
+  margin: 2em 0;
 }
 
 @media screen and (min-width: 769px) {
@@ -116,6 +117,9 @@
     -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 12px;
+  }
+  .demo-form-container-cont .form-container {
+    margin: 0;
   }
 }
 

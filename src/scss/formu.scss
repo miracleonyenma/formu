@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+:root{
+    --hue: 210;
+    --saturation: 88%;
+    --ligtness: 54%;
+    --main: hsl(var(--hue), var(--saturation), var(--ligtness));
+    --secondary: hsl(var(--hue), var(--saturation), 16%);
+    --background: #ffffff;    
+}
+
 .formu.form-container {
     width: 100%;
     overflow: hidden;
@@ -114,5 +123,38 @@
             transform: translate(0, -50%);
         }
     }
+}
+
+
+.formu.action-btn{
+    background: var(--main);
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    outline: none;
+    
+    span {
+        color: var(--background);
+        display: inline-block;
+        padding: 8px 12px;
+    }
+
+    &.alt{
+        background: var(--background);
+        color: var(--main);
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:active {
+        transform: scale(0.88);
+    }
+
+    &:focus {
+        transform: translateY(4px);
+    }    
 }
 

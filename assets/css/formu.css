@@ -5,6 +5,15 @@
           box-sizing: border-box;
 }
 
+:root {
+  --hue: 210;
+  --saturation: 88%;
+  --ligtness: 54%;
+  --main: hsl(var(--hue), var(--saturation), var(--ligtness));
+  --secondary: hsl(var(--hue), var(--saturation), 16%);
+  --background: #ffffff;
+}
+
 .formu.form-container {
   width: 100%;
   overflow: hidden;
@@ -120,5 +129,40 @@
   left: 20px;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
+}
+
+.formu.action-btn {
+  background: var(--main);
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  outline: none;
+}
+
+.formu.action-btn span {
+  color: var(--background);
+  display: inline-block;
+  padding: 8px 12px;
+}
+
+.formu.action-btn.alt {
+  background: var(--background);
+  color: var(--main);
+}
+
+.formu.action-btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.formu.action-btn:active {
+  -webkit-transform: scale(0.88);
+          transform: scale(0.88);
+}
+
+.formu.action-btn:focus {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
 }
 /*# sourceMappingURL=formu.css.map */

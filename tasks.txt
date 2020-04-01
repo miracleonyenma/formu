@@ -1,0 +1,10 @@
+tasks
+
+- write a script that gets the html code of a form and displays it
+    in pretty format for the user to analyze and use(copy)
+    along with some description of the code, 
+    maybe gotten from within the script, the html or a json file or something
+
+    - (hint: element.innerHTML gets html code)
+
+- 
