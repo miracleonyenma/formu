@@ -9,6 +9,7 @@
     --saturation: 88%;
     --ligtness: 54%;
     --main: hsl(var(--hue), var(--saturation), var(--ligtness));
+    --main-alpha: hsla(210, 88%, 54%, 0.7);
     --secondary: hsl(var(--hue), var(--saturation), 16%);
     --background: #ffffff;    
 }
@@ -127,7 +128,7 @@
 
 
 .formu.action-btn{
-    background: var(--main);
+    background: linear-gradient(0deg, var(--main), var(--main-alpha));
     border-radius: 8px;
     border: none;
     cursor: pointer;
