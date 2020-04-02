@@ -78,6 +78,7 @@
     width: 100%;
     margin: 20px 0;
     position: relative;
+    max-width: 320px;
 
     input {
         width: 100%;
@@ -126,6 +127,74 @@
     }
 }
 
+@media screen and (min-width: 600px){
+    .formu.input-field-cont {
+        width: 50%;
+        max-width: 100%;
+    }
+}
+
+@mixin check-radio-field-cont {
+    // display: inline-flex;
+    align-items: center;
+    width: max-content;
+    position: relative;
+
+    input{
+        // position: absolute;
+        opacity: 0;
+
+        &:checked + label::after{
+            transform: translate(calc(-50% + 7px + 2px), -50%) scale(1);
+        }
+
+    }
+
+    label{
+        margin: 0 8px 0 0;
+        cursor: pointer;
+        padding: 8px;
+        position: unset;
+
+        &::before{
+            content: "";
+            width: 14px;
+            height: 14px;
+            border: 2px solid var(--main);
+            border-radius: 14px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0, -50%);
+        }
+
+        &::after{
+            content: "";
+            width: 7px;
+            height: 7px;
+            background: var(--main);
+            border-radius: 15px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(calc(-50% + 7px + 2px), -50%) scale(0);
+        }
+    }    
+    
+}
+
+.formu.radio-field-cont{
+    @include check-radio-field-cont();
+}
+
+.formu.check-field-cont{
+    @include check-radio-field-cont();
+    label{
+        &::before, &::after{
+            border-radius: 1px;
+        }
+    }
+}
 
 .formu.action-btn{
     background: linear-gradient(0deg, var(--main), var(--main-alpha));
