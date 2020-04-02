@@ -22,6 +22,8 @@ function getDemoFormTitles(elCont, el, targetEl){
         var listItem = document.createElement("li");
         link.textContent = titleText;
         link.setAttribute("href", "#"+titleText);
+        //add class for smooth scroll Plugin
+        link.setAttribute("class", "suaveLink");
         listItem.appendChild(link);
         targetEl.appendChild(listItem);
     };

@@ -31,6 +31,20 @@
   margin: 12px;
 }
 
+#landing .svg-cont {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#landing .svg-cont svg path {
+  fill: var(--background);
+}
+
 #main {
   display: -webkit-box;
   display: -ms-flexbox;
