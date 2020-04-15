@@ -15,6 +15,42 @@
   --background: #ffffff;
 }
 
+.formu.input-field-cont.-placeholder input {
+  width: 100%;
+  height: 100%;
+  padding: 18px 0 0 18px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+}
+
+.formu.input-field-cont.-placeholder input:focus + label span {
+  -webkit-transform: translate(100%, -50%) scale(0.8);
+          transform: translate(100%, -50%) scale(0.8);
+  opacity: 0;
+}
+
+.formu.input-field-cont.-placeholder input:valid + label span {
+  -webkit-transform: translate(100%, -50%) scale(0.8);
+          transform: translate(100%, -50%) scale(0.8);
+  opacity: 0;
+}
+
+.formu.input-field-cont.--box {
+  position: relative;
+  height: 50px;
+  border: 2px solid var(--main);
+}
+
+.formu.input-field-cont.--box input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 12px;
+  font-size: 1em;
+}
+
 .formu.form-container {
   width: 100%;
   overflow: hidden;
@@ -90,7 +126,7 @@
   outline: none;
   border: none;
   border-radius: 8px;
-  background: rgba(0, 0, 0, 0.07);
+  background: transparent;
 }
 
 .formu.input-field-cont input:focus + label span {
@@ -135,7 +171,6 @@
 
 @media screen and (min-width: 600px) {
   .formu.input-field-cont {
-    width: 50%;
     max-width: 100%;
   }
 }

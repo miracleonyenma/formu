@@ -151,6 +151,16 @@
   margin: 2em 0;
 }
 
+.formu.input-field-cont input {
+  background: rgba(0, 0, 0, 0.07);
+}
+
+@media screen and (min-width: 600px) {
+  .formu.input-field-cont {
+    width: 50%;
+  }
+}
+
 @media screen and (min-width: 769px) {
   .demo-form-container-cont {
     display: -ms-grid;
