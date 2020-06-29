@@ -40,6 +40,18 @@
 
 }
 
+.formu.--no-label{
+    padding-top: unset;
+    &.input-field-cont{
+        input{
+            padding: 0 0 0 12px;
+        }
+    }
+    label{
+        display: none;
+    }
+}
+
 .formu.input-field-cont.--box {
     position: relative;
     min-height: 50px;
@@ -68,6 +80,7 @@
 
 .formu.form-wrapper{
     padding: 12px;
+    margin: 12px 0;
     > div{
         margin: 0 0 12px 0;
 
@@ -171,14 +184,13 @@
 .formu.textarea-field-cont {
     margin: 20px 0;
     position: relative;
-    max-width: 420px;
     padding: 36px 0 0 0;
     min-height: 70px;
 
+
     textarea{
-        margin: 0 0 0 0;
+        margin: 0;
         border: none;
-        background: none;
         max-width: 100%;
         width: 100%;
         padding: 18px;
@@ -188,29 +200,37 @@
     //default input styling
         border: none;
         border-radius: 8px;
-        background: transparent;
+        background: rgba(0,0,0,0.09);
 
-        &:focus+label span {
-            // transform: translateY(-112.5%) scale(0.8);
-            top: 18px;
-            opacity: 1;
-            transform-origin: left;
-            color: var(--main);
+        &:focus+label{
+            pointer-events: none;
+
+            span{
+                // transform: translateY(-112.5%) scale(0.8);
+                top: 18px;
+                opacity: 1;
+                transform-origin: left;
+                color: var(--main);
+            }
         }
 
-        &:valid+label span {
-            // transform: translateY(-112.5%) scale(0.8);
-            top: 18px;
-            opacity: 1;
-            transform-origin: left;
-            color: var(--main);
+        &:valid+label {
+            pointer-events: none;
+
+            span {
+                // transform: translateY(-112.5%) scale(0.8);
+                top: 18px;
+                opacity: 1;
+                transform-origin: left;
+                color: var(--main);
+            }
         }
     }
 
     label {
         position: absolute;
         top: 50%;
-        left: 0;
+        left: 0px;
         transform: translate(0, -50%);
         width: 80%;
         height: 100%;
@@ -218,7 +238,7 @@
 
         span {
             position: absolute;
-            top: 50%;
+            top: calc(36px + 18px + 2px);
             left: 20px;
             transform: translate(0, -50%);
         }
@@ -235,11 +255,10 @@
 @mixin check-radio-field-cont {
     // display: inline-flex;
     align-items: center;
-    width: max-content;
     position: relative;
 
     input{
-        // position: absolute;
+        position: absolute;
         opacity: 0;
 
         &:checked + label::after{
@@ -251,8 +270,10 @@
     label{
         margin: 0 8px 0 0;
         cursor: pointer;
-        padding: 8px;
-        position: unset;
+        padding: 8px 8px 8px 24px;
+        position: relative;
+        display: inline-block;
+        width: 100%;
 
         &::before{
             content: "";
@@ -261,7 +282,7 @@
             border: 2px solid var(--main);
             border-radius: 14px;
             position: absolute;
-            top: 50%;
+            top: 16px;
             left: 0;
             transform: translate(0, -50%);
         }
@@ -273,7 +294,7 @@
             background: var(--main);
             border-radius: 15px;
             position: absolute;
-            top: 50%;
+            top: 16px;
             left: 0;
             transform: translate(calc(-50% + 7px + 2px), -50%) scale(0);
         }
@@ -373,7 +394,6 @@
 
 .formu.select-field-cont{
     width: 100%;
-    max-width: 500px;
     border: none;
     padding: 12px;
     border-radius: 4px;

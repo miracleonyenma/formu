@@ -37,6 +37,18 @@
   opacity: 0;
 }
 
+.formu.--no-label {
+  padding-top: unset;
+}
+
+.formu.--no-label.input-field-cont input {
+  padding: 0 0 0 12px;
+}
+
+.formu.--no-label label {
+  display: none;
+}
+
 .formu.input-field-cont.--box {
   position: relative;
   min-height: 50px;
@@ -65,6 +77,7 @@
 
 .formu.form-wrapper {
   padding: 12px;
+  margin: 12px 0;
 }
 
 .formu.form-wrapper > div {
@@ -172,22 +185,24 @@
 .formu.textarea-field-cont {
   margin: 20px 0;
   position: relative;
-  max-width: 420px;
   padding: 36px 0 0 0;
   min-height: 70px;
 }
 
 .formu.textarea-field-cont textarea {
-  margin: 0 0 0 0;
+  margin: 0;
   border: none;
-  background: none;
   max-width: 100%;
   width: 100%;
   padding: 18px;
   outline: none;
   border: none;
   border-radius: 8px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.09);
+}
+
+.formu.textarea-field-cont textarea:focus + label {
+  pointer-events: none;
 }
 
 .formu.textarea-field-cont textarea:focus + label span {
@@ -196,6 +211,10 @@
   -webkit-transform-origin: left;
           transform-origin: left;
   color: var(--main);
+}
+
+.formu.textarea-field-cont textarea:valid + label {
+  pointer-events: none;
 }
 
 .formu.textarea-field-cont textarea:valid + label span {
@@ -209,7 +228,7 @@
 .formu.textarea-field-cont label {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 0px;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
   width: 80%;
@@ -219,7 +238,7 @@
 
 .formu.textarea-field-cont label span {
   position: absolute;
-  top: 50%;
+  top: calc(36px + 18px + 2px);
   left: 20px;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
@@ -235,13 +254,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   position: relative;
 }
 
 .formu.radio-field-cont input {
+  position: absolute;
   opacity: 0;
 }
 
@@ -253,8 +270,10 @@
 .formu.radio-field-cont label {
   margin: 0 8px 0 0;
   cursor: pointer;
-  padding: 8px;
-  position: unset;
+  padding: 8px 8px 8px 24px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
 }
 
 .formu.radio-field-cont label::before {
@@ -264,7 +283,7 @@
   border: 2px solid var(--main);
   border-radius: 14px;
   position: absolute;
-  top: 50%;
+  top: 16px;
   left: 0;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
@@ -277,7 +296,7 @@
   background: var(--main);
   border-radius: 15px;
   position: absolute;
-  top: 50%;
+  top: 16px;
   left: 0;
   -webkit-transform: translate(calc(-50% + 7px + 2px), -50%) scale(0);
           transform: translate(calc(-50% + 7px + 2px), -50%) scale(0);
@@ -287,13 +306,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   position: relative;
 }
 
 .formu.check-field-cont input {
+  position: absolute;
   opacity: 0;
 }
 
@@ -305,8 +322,10 @@
 .formu.check-field-cont label {
   margin: 0 8px 0 0;
   cursor: pointer;
-  padding: 8px;
-  position: unset;
+  padding: 8px 8px 8px 24px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
 }
 
 .formu.check-field-cont label::before {
@@ -316,7 +335,7 @@
   border: 2px solid var(--main);
   border-radius: 14px;
   position: absolute;
-  top: 50%;
+  top: 16px;
   left: 0;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
@@ -329,7 +348,7 @@
   background: var(--main);
   border-radius: 15px;
   position: absolute;
-  top: 50%;
+  top: 16px;
   left: 0;
   -webkit-transform: translate(calc(-50% + 7px + 2px), -50%) scale(0);
           transform: translate(calc(-50% + 7px + 2px), -50%) scale(0);
@@ -420,7 +439,6 @@
 
 .formu.select-field-cont {
   width: 100%;
-  max-width: 500px;
   border: none;
   padding: 12px;
   border-radius: 4px;
