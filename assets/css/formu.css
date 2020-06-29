@@ -39,7 +39,7 @@
 
 .formu.input-field-cont.--box {
   position: relative;
-  height: 50px;
+  min-height: 50px;
   border: 2px solid var(--main);
 }
 
@@ -162,6 +162,62 @@
 }
 
 .formu.input-field-cont label span {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.formu.textarea-field-cont {
+  margin: 20px 0;
+  position: relative;
+  max-width: 420px;
+  padding: 36px 0 0 0;
+  min-height: 70px;
+}
+
+.formu.textarea-field-cont textarea {
+  margin: 0 0 0 0;
+  border: none;
+  background: none;
+  max-width: 100%;
+  width: 100%;
+  padding: 18px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+}
+
+.formu.textarea-field-cont textarea:focus + label span {
+  top: 18px;
+  opacity: 1;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  color: var(--main);
+}
+
+.formu.textarea-field-cont textarea:valid + label span {
+  top: 18px;
+  opacity: 1;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  color: var(--main);
+}
+
+.formu.textarea-field-cont label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 80%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.formu.textarea-field-cont label span {
   position: absolute;
   top: 50%;
   left: 20px;
@@ -317,5 +373,105 @@
 .formu.action-btn:focus {
   -webkit-transform: translateY(4px);
           transform: translateY(4px);
+}
+
+.formu.check-with-svg-field-cont {
+  display: inline-block;
+  margin: 12px;
+}
+
+.formu.check-with-svg-field-cont input {
+  display: none;
+}
+
+.formu.check-with-svg-field-cont input:valid + label {
+  border-color: var(--main);
+}
+
+.formu.check-with-svg-field-cont input:valid + label span {
+  color: var(--main);
+}
+
+.formu.check-with-svg-field-cont input:valid + label svg path, .formu.check-with-svg-field-cont input:valid + label svg rect, .formu.check-with-svg-field-cont input:valid + label svg circle, .formu.check-with-svg-field-cont input:valid + label svg line, .formu.check-with-svg-field-cont input:valid + label svg polyline, .formu.check-with-svg-field-cont input:valid + label svg ellipse {
+  stroke: var(--main);
+}
+
+.formu.check-with-svg-field-cont label {
+  border: 2px solid #333;
+  border-radius: 6px;
+  display: inline-block;
+  text-align: center;
+  padding: 12px;
+}
+
+.formu.check-with-svg-field-cont label path, .formu.check-with-svg-field-cont label rect, .formu.check-with-svg-field-cont label circle, .formu.check-with-svg-field-cont label line, .formu.check-with-svg-field-cont label polyline, .formu.check-with-svg-field-cont label ellipse {
+  stroke: #333;
+  stroke-width: 1.5%;
+  fill: transparent;
+}
+
+.formu.check-with-svg-field-cont .field-svg {
+  width: 140px;
+  height: 100%;
+  padding: 2px;
+  background: transparent;
+  margin-bottom: 6px;
+}
+
+.formu.select-field-cont {
+  width: 100%;
+  max-width: 500px;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  background: var(--main);
+  position: relative;
+}
+
+.formu.select-field-cont select {
+  -webkit-appearance: none;
+  color: #fff;
+  outline: none;
+  position: relative;
+  background: transparent;
+  width: 100%;
+  border: none;
+}
+
+.formu.select-field-cont select option {
+  color: #333;
+  background: #fff;
+  border-radius: 4px;
+  border: none;
+}
+
+.formu.select-field-cont label {
+  width: calc(20% - 12px);
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  pointer-events: none;
+}
+
+.formu.select-field-cont label span {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.formu.select-field-cont label span svg {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 5px;
+  width: 30px;
+  height: 15px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 /*# sourceMappingURL=formu.css.map */

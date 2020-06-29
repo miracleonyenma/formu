@@ -326,3 +326,104 @@
     }    
 }
 
+.formu.check-with-svg-field-cont{
+    display: inline-block;
+    margin: 12px;
+
+    input{
+        display: none;
+
+        &:valid +label{
+            border-color: var(--main);
+            
+            span{
+                color: var(--main);
+            }
+
+            svg{
+                path, rect, circle, line, polyline, ellipse{
+                    stroke: var(--main);
+                }
+            }
+        }
+    }
+
+    label{
+        border: 2px solid #333;   
+        border-radius: 6px;
+        display: inline-block;
+        text-align: center;
+        padding: 12px;
+
+        path, rect, circle, line, polyline, ellipse{
+            stroke: #333;
+            stroke-width: 1.5%;
+            fill: transparent;
+        }
+    }
+
+    .field-svg{
+        width: 140px;
+        height: 100%;
+        padding: 2px;
+        background: transparent;
+        margin-bottom: 6px;
+    }
+}
+
+.formu.select-field-cont{
+    width: 100%;
+    max-width: 500px;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    background: var(--main);
+    position: relative;
+
+
+    select{
+        -webkit-appearance: none;
+        color: #fff;
+        outline: none;
+        position: relative;
+        background: transparent;
+        width: 100%;
+        border: none;
+
+        option{
+            color: #333;
+            background: #fff;
+            border-radius: 4px;
+            border: none;
+        }
+    }
+
+    label{
+        width: calc(20% - 12px);
+        height: 100%;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: center;
+        pointer-events: none;
+
+        span{
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            svg{
+                fill: none;
+                stroke: #fff;
+                stroke-width: 5px;
+                width: 30px;
+                height: 15px;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+            }
+        }
+    }
+}
